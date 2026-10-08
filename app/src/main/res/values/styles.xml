@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.CrashPulse" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/crashpulse_red</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/crashpulse_ink</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

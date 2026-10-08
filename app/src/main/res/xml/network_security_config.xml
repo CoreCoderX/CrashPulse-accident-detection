@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Shared configuration for every build type.
+
+        Cleartext HTTP is refused, so a release build cannot silently fall back
+        to an unencrypted connection. Local/LAN cleartext is granted ONLY by
+        the debug variant, which overrides this file with its own
+        src/debug/res/xml/network_security_config.xml.
+
+        Do NOT try to grant cleartext from here via <debug-overrides>. Verified
+        on a physical device (Android 15, targetSdk 35): even with
+        android:debuggable=true and android:usesCleartextTraffic=true, a
+        <debug-overrides><base-config cleartextTrafficPermitted="true"/></debug-overrides>
+        here did NOT take effect and requests still failed with
+        "CLEARTEXT communication to <host> not permitted by network security
+        policy". Additionally, <debug-overrides> rejects a nested
+        <domain-config> outright ("Nested domain-config not allowed in
+        debug-overrides"), crashing app startup. A debug source-set override is
+        the reliable mechanism.
+    -->
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

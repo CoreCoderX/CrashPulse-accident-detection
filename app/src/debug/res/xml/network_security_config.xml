@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Debug-variant override of src/main/res/xml/network_security_config.xml.
+
+    The top-level <base-config> permits cleartext to every host, which is what
+    the trusted-LAN college demonstration needs: the backend address can change
+    with DHCP without editing this file, and only this debug variant is
+    affected. The release variant keeps cleartext disabled.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
