@@ -28,6 +28,24 @@
 
 ---
 
+<div align="center">
+
+### Part of a three-component system
+
+| Component | Repository | Role |
+|---|---|---|
+| **Detector** | [`Accident_Detection`](https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response) | YOLO checkpoint + temporal decision engine; decides **whether** an incident occurred |
+| **Backend** | [`Accident_Detection/Backend`](https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response) | FastAPI + PostgreSQL; records incidents and pushes alerts |
+| **Android client** | **this repository** | The human review and response surface |
+
+The **full Accident_Detection project** - detector, backend and this app's
+companion runbooks - is at
+**https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response**
+
+</div>
+
+---
+
 ## Table of Contents
 
 1. [Project at a Glance](#1-project-at-a-glance)
@@ -170,8 +188,10 @@ CrashPulse/
 ```
 
 The FastAPI + PostgreSQL backend and the YOLO detector live in the companion
-project `Accident_Detection/`. This repository contains **only the mobile
-client**.
+project [`Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response`](https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response),
+which holds the **complete Accident_Detection** system - the detector CLI, the
+temporal decision engine, the Backend service, and the runbooks. This repository
+contains **only the mobile client**.
 
 ---
 
@@ -530,9 +550,10 @@ trusted LAN, by the operator who installed it.
 
 ## 13. Backend API Surface
 
-The app consumes these endpoints from the companion `Accident_Detection/Backend`
-project. All incident and device routes require a bearer token and accepted
-Terms.
+The app consumes these endpoints from the companion
+[`Accident_Detection`](https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response)
+project's `Backend/` service. All incident and device routes require a bearer
+token and accepted Terms.
 
 | Route | Use |
 |---|---|
@@ -656,7 +677,8 @@ and statically verified but not yet confirmed on a physical device**.
   **[Turbine](https://github.com/cashapp/turbine)** - without whom this work
   would not have been possible.
 - The **CrashPulse backend and detector teams** for the stable incident contract
-  this client is written against.
+  this client is written against - see
+  [`SafeVision-Accident-Detection-Emergency-Response`](https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response).
 
 ---
 
@@ -679,5 +701,7 @@ Retrofit/OkHttp (Apache-2.0) and AndroidX (Apache-2.0).
 *Supervised by Mrs. J. Vinothini, Department of CSE*
 
 [github.com/CoreCoderX/CrashPulse-accident-detection-](https://github.com/CoreCoderX/CrashPulse-accident-detection-)
+
+Full system (detector + backend): [SafeVision-Accident-Detection-Emergency-Response](https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response)
 
 </div>
