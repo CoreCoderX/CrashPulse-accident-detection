@@ -700,7 +700,7 @@ Retrofit/OkHttp (Apache-2.0) and AndroidX (Apache-2.0).
 *B.E. Computer Science & Engineering - AIHT, Kazhipattur, Chennai - 2023 - 2027*
 *Supervised by Mrs. J. Vinothini, Department of CSE*
 
-[github.com/CoreCoderX/CrashPulse-accident-detection-](https://github.com/CoreCoderX/CrashPulse-accident-detection-)
+[github.com/CoreCoderX/CrashPulse-accident-detection](https://github.com/CoreCoderX/CrashPulse-accident-detection)
 
 Full system (detector + backend): [SafeVision-Accident-Detection-Emergency-Response](https://github.com/Rohith-vencenzo/SafeVision-Accident-Detection-Emergency-Response)
 
